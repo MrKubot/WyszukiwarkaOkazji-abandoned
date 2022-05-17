@@ -4,13 +4,11 @@ from pathlib import Path
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 
-# Quick-start development settings - unsuitable for production
-# See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
 
-# SECURITY WARNING: keep the secret key used in production secret!
+# bedzie uzywane jedynie lokalnie, wiec nie bede sie bawic w ukrywanie tego
 SECRET_KEY = 'django-insecure-(c^ft73c^_an7@f^f)om9gloz*)f@)&w$)mf#x)8yn1c)2+lsn'
 
-# SECURITY WARNING: don't run with debug turned on in production!
+
 DEBUG = True
 
 ALLOWED_HOSTS = []
@@ -26,7 +24,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
-    'main'
+    'main.apps.MainConfig'
 ]
 
 MIDDLEWARE = [
