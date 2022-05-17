@@ -1,0 +1,17 @@
+{% extends 'main/base.html' %}
+
+
+
+{% block body %}
+
+    <form method="post" action="/dodaj_obiekt/">
+
+        {% csrf_token %}
+
+        {{ form.as_p}}
+        <br>
+        <button type="submit" class="btn btn-success">Dodaj obiekt</button>
+
+    </form>
+
+{%  endblock %}
