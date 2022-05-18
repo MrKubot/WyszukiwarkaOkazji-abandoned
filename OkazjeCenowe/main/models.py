@@ -1,9 +1,10 @@
-from django import forms
+from django.db import models
 
 
-class DaneProduktu(forms.Form):
-    nazwa = forms.CharField(max_length=150, required=True)
-    URL_OLX = forms.URLField(required=True)
-    URL_CENEO = forms.URLField(required=True)
-    URL_VINTED = forms.URLField(required=True)
-    SCD = forms.IntegerField(required=False)
+class DaneProduktu(models.Model):
+    nazwa = models.CharField(max_length=150)
+    URL_OLX = models.URLField()
+    URL_CENEO = models.URLField()
+    URL_VINTED = models.URLField()
+    SCD = models.IntegerField()
+ 
